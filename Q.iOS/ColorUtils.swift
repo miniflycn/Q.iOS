@@ -9,6 +9,7 @@
 import UIKit
 
 class ColorUtils {
+    // UInt -> UIColor, for example: 0xFFFFFF -> UIColor.whiteColor()
     static func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

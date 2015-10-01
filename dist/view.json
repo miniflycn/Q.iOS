@@ -2,6 +2,20 @@
 	"type": "root",
 	"childs": [
 		{
+			"type": "UILabel",
+			"textAlign": "center",
+			"fontSize": 25,
+			"text": "The army is still one of the last male bastions.",
+			"color": 125483,
+			"top": 30,
+			"directives": [
+				{
+					"name": "text",
+					"target": "title"
+				}
+			]
+		},
+		{
 			"type": "UIButton",
 			"textAlign": "center",
 			"fontSize": 25,

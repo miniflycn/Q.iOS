@@ -17,6 +17,7 @@
 		60C706A41BBD81D600B9C5B2 /* QComponentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A31BBD81D600B9C5B2 /* QComponentProtocol.swift */; };
 		60C706A91BBD8E5B00B9C5B2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */; };
 		60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */; };
+		60C706AD1BBD967200B9C5B2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706AC1BBD967200B9C5B2 /* UILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		60C706A31BBD81D600B9C5B2 /* QComponentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QComponentProtocol.swift; sourceTree = "<group>"; };
 		60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		60C706AC1BBD967200B9C5B2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				60C706A31BBD81D600B9C5B2 /* QComponentProtocol.swift */,
 				60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */,
+				60C706AC1BBD967200B9C5B2 /* UILabel.swift */,
 			);
 			name = QComponent;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				60C706A91BBD8E5B00B9C5B2 /* UIButton.swift in Sources */,
 				60C7067D1BBD698C00B9C5B2 /* ViewController.swift in Sources */,
+				60C706AD1BBD967200B9C5B2 /* UILabel.swift in Sources */,
 				60C706A41BBD81D600B9C5B2 /* QComponentProtocol.swift in Sources */,
 				60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */,
 				60C706A21BBD6AF600B9C5B2 /* QViewController.swift in Sources */,

@@ -13,30 +13,38 @@ class QViewController: UIViewController {
     
     // init ctx
     var ctx = JSContext()
+    // init DOM
     var dom: AnyObject? = nil
     
+    // load file string from path
     private func loadFile(path: String) -> NSString {
         return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
     }
     
+    // load DOM from path
     private func loadDOM(path: String) {
         let data = loadFile(path).dataUsingEncoding(NSUTF8StringEncoding)!
         dom = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil)
     }
     
+    // load logic script
     private func loadLogic(path: String) {
         ctx.evaluateScript(loadFile(path) as! String)
     }
     
+    // print one component
     private func printComponent(str: String, options: AnyObject) {
         switch str {
             case "UIButton":
                 return UIButton.print2View(self.view, viewModel: options)
+            case "UILabel":
+                return UILabel.print2View(self.view, viewModel: options)
             default:
                 assert(false, "\(str) is not defined")
         }
     }
     
+    // print all components which are defined in DOM
     private func printDOM() {
         var arr: [AnyObject] = dom!.objectForKey("childs") as! [AnyObject]
         let count = arr.count
@@ -45,6 +53,7 @@ class QViewController: UIViewController {
         }
     }
     
+    // print reload btn & bind reload
     private func addReloadBtn() {
         let btn = UIButton(frame:CGRect(origin: CGPointMake(10.0, self.view.frame.height - 100.0), size: CGSizeMake(150,50)))
         btn.setTitle("Reload", forState: UIControlState.Normal)
@@ -53,6 +62,7 @@ class QViewController: UIViewController {
         self.view.addSubview(btn)
     }
     
+    // clear view & reinit
     private func clearView() {
         self.view.subviews.map (
             { $0.removeFromSuperview() }
@@ -60,17 +70,19 @@ class QViewController: UIViewController {
         self.ctx = JSContext()
     }
     
+    // reload view
     private func reloadView() {
         clearView()
         self.viewDidLoad()
     }
     
+    // reload view from event
     func reloadView(sender: UIButton) {
         println("reload")
         reloadView()
     }
     
-    
+    // load all dynamic source
     func loadSource(path: String) {
         loadDOM("\(path)/view.json")
         loadLogic("\(path)/logic.js")
