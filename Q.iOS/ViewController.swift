@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: QViewController {
+    
+    override func loadView() {
+        super.loadView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // load logic & view
+        loadSource("/Users/miniflycn/github/Q.iOS/dist")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

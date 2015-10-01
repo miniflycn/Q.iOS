@@ -1,0 +1,20 @@
+{
+	"type": "root",
+	"childs": [
+		{
+			"type": "UIButton",
+			"textAlign": "center",
+			"fontSize": 25,
+			"text": "Click Me",
+			"backgroundColor": 125483,
+			"top": 100,
+			"directives": [
+				{
+					"name": "on",
+					"arg": "click",
+					"target": "changeTitle"
+				}
+			]
+		}
+	]
+}
