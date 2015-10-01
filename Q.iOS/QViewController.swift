@@ -45,10 +45,36 @@ class QViewController: UIViewController {
         }
     }
     
+    private func addReloadBtn() {
+        let btn = UIButton(frame:CGRect(origin: CGPointMake(10.0, self.view.frame.height - 100.0), size: CGSizeMake(150,50)))
+        btn.setTitle("Reload", forState: UIControlState.Normal)
+        btn.backgroundColor = UIColor.blueColor()
+        btn.addTarget(self, action: "reloadView:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(btn)
+    }
+    
+    private func clearView() {
+        self.view.subviews.map (
+            { $0.removeFromSuperview() }
+        )
+        self.ctx = JSContext()
+    }
+    
+    private func reloadView() {
+        clearView()
+        self.viewDidLoad()
+    }
+    
+    func reloadView(sender: UIButton) {
+        println("reload")
+        reloadView()
+    }
+    
     
     func loadSource(path: String) {
         loadDOM("\(path)/view.json")
         loadLogic("\(path)/logic.js")
         printDOM()
+        addReloadBtn()
     }
 }
