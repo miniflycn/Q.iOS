@@ -1,5 +1,5 @@
 //
-//  QComponentProtocol.swift
+//  QUIProtocol.swift
 //  Q.iOS
 //
 //  Created by 杨 文坚 on 15/10/1.
