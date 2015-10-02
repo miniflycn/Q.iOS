@@ -16,6 +16,8 @@ class QViewController: UIViewController {
     // init DOM
     var dom: AnyObject? = nil
     
+    var directiveManager = DirectiveManager()
+    
     // load file string from path
     private func loadFile(path: String) -> NSString {
         return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
@@ -34,14 +36,23 @@ class QViewController: UIViewController {
     
     // print one component
     private func printComponent(str: String, options: AnyObject) {
+        var ui:QUIProtocol? = nil
         switch str {
             case "UIButton":
-                return UIButton.print2View(self.view, viewModel: options)
+                ui = UIButton.createQUI(self.view.frame, viewModel: options)
+                break
             case "UILabel":
-                return UILabel.print2View(self.view, viewModel: options)
+                ui = UILabel.createQUI(self.view.frame, viewModel: options)
+                break
             default:
                 assert(false, "\(str) is not defined")
         }
+        
+        let directives: [AnyObject] = options.objectForKey("directives") as! [AnyObject]
+        // bind direcdtives & attach UI instance uuid & add to view
+        QUIInstanceManager.attach(ui!, viewModel: options)
+        directiveManager.bind(ui!, directives: directives)
+        self.view.addSubview(ui as! UIView)
     }
     
     // print all components which are defined in DOM
@@ -88,5 +99,13 @@ class QViewController: UIViewController {
         loadLogic("\(path)/logic.js")
         printDOM()
         addReloadBtn()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"evalJavascript:", name: "evalJavascriptNotification", object: nil)
+    }
+    
+    func evalJavascript(notification: NSNotification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let target = userInfo["target"] as! String
+        let jsv: AnyObject! = ctx.evaluateScript("\(target)()").toObject()
+        directiveManager.emit(jsv.objectForKey("prop") as! String, value: jsv.objectForKey("value")!)
     }
 }

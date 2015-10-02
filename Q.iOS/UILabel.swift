@@ -10,18 +10,15 @@ import UIKit
 
 extension UILabel: QUIProtocol {
     
-    static func print2View(view: UIView, viewModel: AnyObject) {
-        let rectRect:CGRect = CGRectMake(20, CGFloat(viewModel.objectForKey("top")!.intValue), view.frame.width - 40, 80)
-        let component = UILabel(frame: rectRect)
-        let directives: [AnyObject] = viewModel.objectForKey("directives") as! [AnyObject]
-        component.text = viewModel.objectForKey("text") as? String
-        component.textColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("color")!.intValue))
-        // bind direcdtives and add to view
-        directiveManager.bind(component, directives: directives)
-        view.addSubview(component)
+    func innerText(text: String) {
+        self.text = text
     }
     
-    func bindOnDirective(directive: AnyObject) {
-        // TODO
+    static func createQUI(frame: CGRect, viewModel: AnyObject) -> QUIProtocol {
+        let rectRect:CGRect = CGRectMake(20, CGFloat(viewModel.objectForKey("top")!.intValue), frame.width - 40, 40)
+        let ui = UILabel(frame: rectRect)
+        ui.innerText(viewModel.objectForKey("text") as! String)
+        ui.textColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("color")!.intValue))
+        return ui
     }
 }

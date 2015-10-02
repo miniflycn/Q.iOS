@@ -6,21 +6,58 @@
 //  Copyright (c) 2015年 miniflycn. All rights reserved.
 //
 
-class directiveManager {
-    static func bind(component: QUIProtocol, directives: [AnyObject]) {
+import UIKit
+
+class DirectiveManager: DirectiveHandleManager {
+    
+    func bind(qui: QUIProtocol, directives: [AnyObject]) {
+        let uuid = (qui as! UIView).tag
         for (var i = 0, count = directives.count; i < count; i++) {
-            bindOneDirective(component, directive: directives[i])
+            let tmp: AnyObject = directives[i]
+            let directive = DirectiveStruct(
+                uiId: uuid,
+                name: tmp.objectForKey("name") as! String,
+                target: tmp.objectForKey("target") as! String,
+                arg: tmp.objectForKey("arg") as? String
+            )
+            bindOneDirective(qui, directive: directive)
         }
     }
     
-    private static func bindOneDirective(component: QUIProtocol, directive: AnyObject) {
-        let directiveName = directive.objectForKey("name") as! String
+    private func bindOneDirective(ui: QUIProtocol, directive: DirectiveStruct) {
+        let directiveName = directive.name
         switch directiveName {
             case "on":
-                component.bindOnDirective(directive)
+                bindOn(ui, directive: directive)
+                break
+            case "text":
+                bindNormal(ui, directive: directive)
                 break
             default:
                 println("No define \(directiveName) direcdtive")
+        }
+    }
+    
+    private func bindOn(qui: QUIProtocol, directive: DirectiveStruct) {
+        // if is a UIControl
+        if (qui is UIControl) {
+            let ui = qui as! UIControl
+            ui.addTarget(ui, action: "delegateClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        } else {
+            println("\(qui) is not a UIControl instance")
+        }
+    }
+    
+    private func bindNormal(ui: QUIProtocol, directive: DirectiveStruct) {
+        self.on(directive.target, directive: directive)
+    }
+    
+    static func delegateClick(sender: UIControl) {
+        let uuid = sender.tag
+        let directive: AnyObject? = QUIInstanceManager.getDirective(uuid, directiveName: "on")
+        // has directive
+        if (directive != nil) {
+            NSNotificationCenter.defaultCenter().postNotificationName("evalJavascriptNotification", object: self, userInfo: ["target": directive?.objectForKey("target") as! String])
         }
     }
 }

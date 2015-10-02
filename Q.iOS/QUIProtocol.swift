@@ -9,7 +9,9 @@
 import UIKit
 protocol QUIProtocol {
     // print a component to view
-    static func print2View(view: UIView, viewModel: AnyObject)
-    // bind on directive
-    func bindOnDirective(directive: AnyObject)
+    static func createQUI(frame: CGRect, viewModel: AnyObject) -> QUIProtocol
+    // something just like DOM API innerText
+//    var innerText:String { get set }
+    
+    func innerText(text: String)
 }
