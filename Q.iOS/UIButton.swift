@@ -8,14 +8,20 @@
 
 import UIKit
 
-extension UIButton: QComponentProtocol {
+extension UIButton: QUIProtocol {
     
     static func print2View(view: UIView, viewModel: AnyObject) {
         let rectRect:CGRect = CGRectMake(20, CGFloat(viewModel.objectForKey("top")!.intValue), view.frame.width - 40, 40)
-        let btn = UIButton(frame: rectRect)
+        let component = UIButton(frame: rectRect)
         let directives: [AnyObject] = viewModel.objectForKey("directives") as! [AnyObject]
-        btn.setTitle(viewModel.objectForKey("text") as? String, forState: UIControlState.Normal)
-        btn.backgroundColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("backgroundColor")!.intValue))
-        view.addSubview(btn)
+        component.setTitle(viewModel.objectForKey("text") as? String, forState: UIControlState.Normal)
+        component.backgroundColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("backgroundColor")!.intValue))
+        // bind direcdtives and add to view
+        directiveManager.bind(component, directives: directives)
+        view.addSubview(component)
+    }
+    
+    func bindOnDirective(directive: AnyObject) {
+        println(directive)
     }
 }

@@ -14,10 +14,11 @@
 		60C706851BBD698C00B9C5B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C706831BBD698C00B9C5B2 /* LaunchScreen.xib */; };
 		60C706911BBD698C00B9C5B2 /* Q_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706901BBD698C00B9C5B2 /* Q_iOSTests.swift */; };
 		60C706A21BBD6AF600B9C5B2 /* QViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A11BBD6AF600B9C5B2 /* QViewController.swift */; };
-		60C706A41BBD81D600B9C5B2 /* QComponentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A31BBD81D600B9C5B2 /* QComponentProtocol.swift */; };
+		60C706A41BBD81D600B9C5B2 /* QUIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A31BBD81D600B9C5B2 /* QUIProtocol.swift */; };
 		60C706A91BBD8E5B00B9C5B2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */; };
 		60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */; };
 		60C706AD1BBD967200B9C5B2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706AC1BBD967200B9C5B2 /* UILabel.swift */; };
+		60CBE2981BBE309300B5B478 /* DirectiveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CBE2971BBE309300B5B478 /* DirectiveManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +43,11 @@
 		60C7068F1BBD698C00B9C5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60C706901BBD698C00B9C5B2 /* Q_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q_iOSTests.swift; sourceTree = "<group>"; };
 		60C706A11BBD6AF600B9C5B2 /* QViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QViewController.swift; sourceTree = "<group>"; };
-		60C706A31BBD81D600B9C5B2 /* QComponentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QComponentProtocol.swift; sourceTree = "<group>"; };
+		60C706A31BBD81D600B9C5B2 /* QUIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUIProtocol.swift; sourceTree = "<group>"; };
 		60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		60C706AC1BBD967200B9C5B2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		60CBE2971BBE309300B5B478 /* DirectiveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,8 @@
 		60C706771BBD698C00B9C5B2 /* Q.iOS */ = {
 			isa = PBXGroup;
 			children = (
-				60C706A51BBD82C200B9C5B2 /* QComponent */,
-				60C706A01BBD6AE400B9C5B2 /* Q */,
+				60C706A51BBD82C200B9C5B2 /* Q.UI */,
+				60C706A01BBD6AE400B9C5B2 /* Q.core */,
 				60C7067A1BBD698C00B9C5B2 /* AppDelegate.swift */,
 				60C7067C1BBD698C00B9C5B2 /* ViewController.swift */,
 				60C7067E1BBD698C00B9C5B2 /* Main.storyboard */,
@@ -124,23 +126,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		60C706A01BBD6AE400B9C5B2 /* Q */ = {
+		60C706A01BBD6AE400B9C5B2 /* Q.core */ = {
 			isa = PBXGroup;
 			children = (
+				60C706A31BBD81D600B9C5B2 /* QUIProtocol.swift */,
 				60C706A11BBD6AF600B9C5B2 /* QViewController.swift */,
 				60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */,
+				60CBE2971BBE309300B5B478 /* DirectiveManager.swift */,
 			);
-			name = Q;
+			name = Q.core;
 			sourceTree = "<group>";
 		};
-		60C706A51BBD82C200B9C5B2 /* QComponent */ = {
+		60C706A51BBD82C200B9C5B2 /* Q.UI */ = {
 			isa = PBXGroup;
 			children = (
-				60C706A31BBD81D600B9C5B2 /* QComponentProtocol.swift */,
 				60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */,
 				60C706AC1BBD967200B9C5B2 /* UILabel.swift */,
 			);
-			name = QComponent;
+			name = Q.UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +249,8 @@
 				60C706A91BBD8E5B00B9C5B2 /* UIButton.swift in Sources */,
 				60C7067D1BBD698C00B9C5B2 /* ViewController.swift in Sources */,
 				60C706AD1BBD967200B9C5B2 /* UILabel.swift in Sources */,
-				60C706A41BBD81D600B9C5B2 /* QComponentProtocol.swift in Sources */,
+				60CBE2981BBE309300B5B478 /* DirectiveManager.swift in Sources */,
+				60C706A41BBD81D600B9C5B2 /* QUIProtocol.swift in Sources */,
 				60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */,
 				60C706A21BBD6AF600B9C5B2 /* QViewController.swift in Sources */,
 				60C7067B1BBD698C00B9C5B2 /* AppDelegate.swift in Sources */,
@@ -447,6 +451,7 @@
 				60C706961BBD698C00B9C5B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60C706971BBD698C00B9C5B2 /* Build configuration list for PBXNativeTarget "Q.iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +460,7 @@
 				60C706991BBD698C00B9C5B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

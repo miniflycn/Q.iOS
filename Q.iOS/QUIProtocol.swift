@@ -7,7 +7,9 @@
 //
 
 import UIKit
-protocol QComponentProtocol {
+protocol QUIProtocol {
     // print a component to view
     static func print2View(view: UIView, viewModel: AnyObject)
+    // bind on directive
+    func bindOnDirective(directive: AnyObject)
 }
