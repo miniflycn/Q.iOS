@@ -1,12 +1,13 @@
 var words = [
-        'Hello Swift!',
-        'Hello World!',
+        'Hello Swift',
+        'Hello World',
         'Hello Tencent',
         'Hello IMWeb',
         '你好世界',
         '你好腾讯',
         '你好微信',
-        '你好QQ'
+        '你好QQ',
+        123
     ];
 
 function changeTitle() {

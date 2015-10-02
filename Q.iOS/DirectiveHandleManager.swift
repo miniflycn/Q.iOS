@@ -31,18 +31,25 @@ class DirectiveHandleManager {
     
     // handle all property -> directive
     func handle(directive: DirectiveStruct, value: AnyObject) {
+        var newVal: AnyObject? = nil
+        if (directive.filters.count > 0) {
+            newVal = FilterManager.makeFilter(value, filters: directive.filters)
+        } else {
+            newVal = value
+        }
+        
         switch directive.name {
-        case "text":
-            self.handleText(directive, value: value)
-            break
-        default:
-            print("Couldn't handle \(directive.name)")
+            case "text":
+                self.handleText(directive, value: newVal!)
+                break
+            default:
+                print("Couldn't handle \(directive.name)")
         }
     }
     
     // handle property -> text
     func handleText(directive: DirectiveStruct, value: AnyObject) {
         let qui = QUIInstanceManager.get(directive.uiId)
-        qui!.setContainText(value as! String)
+        qui!.setContainText("\(value)")
     }
 }

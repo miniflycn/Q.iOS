@@ -11,7 +11,14 @@
 			"directives": [
 				{
 					"name": "text",
-					"target": "title"
+					"target": "title",
+					"filters": [{
+						"method": "append",
+						"args": ["!!"]
+					}, {
+						"method": "prepend",
+						"args": ["Q.iOS say: "]
+					}]
 				}
 			]
 		},
@@ -26,11 +33,13 @@
 				{
 					"name": "on",
 					"arg": "click",
-					"target": "changeTitle"
+					"target": "changeTitle",
+					"filters": []
 				},
 				{
 					"name": "text",
-					"target": "title"
+					"target": "title",
+					"filters": []
 				}
 			]
 		}

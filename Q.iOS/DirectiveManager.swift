@@ -18,7 +18,8 @@ class DirectiveManager: DirectiveHandleManager {
                 uiId: uuid,
                 name: tmp.objectForKey("name") as! String,
                 target: tmp.objectForKey("target") as! String,
-                arg: tmp.objectForKey("arg") as? String
+                arg: tmp.objectForKey("arg") as? String,
+                filters: tmp.objectForKey("filters") as! [AnyObject]
             )
             bindOneDirective(qui, directive: directive)
         }

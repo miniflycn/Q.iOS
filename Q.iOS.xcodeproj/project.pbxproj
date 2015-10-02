@@ -11,6 +11,8 @@
 		603D17731BBE67AA00D64898 /* QUidUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D17721BBE67AA00D64898 /* QUidUtils.swift */; };
 		60C3C11B1BBEB503009381A1 /* DirectiveStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C11A1BBEB503009381A1 /* DirectiveStruct.swift */; };
 		60C3C11D1BBEBABD009381A1 /* DirectiveHandleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C11C1BBEBABD009381A1 /* DirectiveHandleManager.swift */; };
+		60C3C1B61BBEE933009381A1 /* FilterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C1B51BBEE933009381A1 /* FilterStruct.swift */; };
+		60C3C1B81BBEEB96009381A1 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C1B71BBEEB96009381A1 /* FilterManager.swift */; };
 		60C7067B1BBD698C00B9C5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7067A1BBD698C00B9C5B2 /* AppDelegate.swift */; };
 		60C7067D1BBD698C00B9C5B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7067C1BBD698C00B9C5B2 /* ViewController.swift */; };
 		60C706801BBD698C00B9C5B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C7067E1BBD698C00B9C5B2 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		603D17721BBE67AA00D64898 /* QUidUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUidUtils.swift; sourceTree = "<group>"; };
 		60C3C11A1BBEB503009381A1 /* DirectiveStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveStruct.swift; sourceTree = "<group>"; };
 		60C3C11C1BBEBABD009381A1 /* DirectiveHandleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveHandleManager.swift; sourceTree = "<group>"; };
+		60C3C1B51BBEE933009381A1 /* FilterStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterStruct.swift; sourceTree = "<group>"; };
+		60C3C1B71BBEEB96009381A1 /* FilterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		60C706751BBD698C00B9C5B2 /* Q.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Q.iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C706791BBD698C00B9C5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60C7067A1BBD698C00B9C5B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,13 +87,6 @@
 				603D17721BBE67AA00D64898 /* QUidUtils.swift */,
 			);
 			name = utils;
-			sourceTree = "<group>";
-		};
-		60C3C11E1BBECCFD009381A1 /* expression */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = expression;
 			sourceTree = "<group>";
 		};
 		60C7066C1BBD698C00B9C5B2 = {
@@ -153,7 +150,6 @@
 		60C706A01BBD6AE400B9C5B2 /* Q.core */ = {
 			isa = PBXGroup;
 			children = (
-				60C3C11E1BBECCFD009381A1 /* expression */,
 				603D17711BBE677800D64898 /* utils */,
 				60C706A31BBD81D600B9C5B2 /* QUIProtocol.swift */,
 				60C706A11BBD6AF600B9C5B2 /* QViewController.swift */,
@@ -161,6 +157,8 @@
 				603D176F1BBE671E00D64898 /* QUIInstanceManager.swift */,
 				60C3C11A1BBEB503009381A1 /* DirectiveStruct.swift */,
 				60C3C11C1BBEBABD009381A1 /* DirectiveHandleManager.swift */,
+				60C3C1B51BBEE933009381A1 /* FilterStruct.swift */,
+				60C3C1B71BBEEB96009381A1 /* FilterManager.swift */,
 			);
 			name = Q.core;
 			sourceTree = "<group>";
@@ -279,6 +277,7 @@
 				60C7067D1BBD698C00B9C5B2 /* ViewController.swift in Sources */,
 				60C706AD1BBD967200B9C5B2 /* UILabel.swift in Sources */,
 				60CBE2981BBE309300B5B478 /* DirectiveManager.swift in Sources */,
+				60C3C1B81BBEEB96009381A1 /* FilterManager.swift in Sources */,
 				603D17731BBE67AA00D64898 /* QUidUtils.swift in Sources */,
 				60C706A41BBD81D600B9C5B2 /* QUIProtocol.swift in Sources */,
 				60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */,
@@ -286,6 +285,7 @@
 				60C3C11D1BBEBABD009381A1 /* DirectiveHandleManager.swift in Sources */,
 				60C7067B1BBD698C00B9C5B2 /* AppDelegate.swift in Sources */,
 				603D17701BBE671E00D64898 /* QUIInstanceManager.swift in Sources */,
+				60C3C1B61BBEE933009381A1 /* FilterStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
