@@ -27,6 +27,10 @@
 					"name": "on",
 					"arg": "click",
 					"target": "changeTitle"
+				},
+				{
+					"name": "text",
+					"target": "title"
 				}
 			]
 		}
