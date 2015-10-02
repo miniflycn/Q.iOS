@@ -10,14 +10,14 @@ import UIKit
 
 extension UILabel: QUIProtocol {
     
-    func innerText(text: String) {
-        self.text = text
+    func setContainText(str: String) {
+        self.text = str
     }
     
     static func createQUI(frame: CGRect, viewModel: AnyObject) -> QUIProtocol {
         let rectRect:CGRect = CGRectMake(20, CGFloat(viewModel.objectForKey("top")!.intValue), frame.width - 40, 40)
         let ui = UILabel(frame: rectRect)
-        ui.innerText(viewModel.objectForKey("text") as! String)
+        ui.setContainText(viewModel.objectForKey("text") as! String)
         ui.textColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("color")!.intValue))
         return ui
     }

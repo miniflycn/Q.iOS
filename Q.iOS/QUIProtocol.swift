@@ -10,8 +10,6 @@ import UIKit
 protocol QUIProtocol {
     // print a component to view
     static func createQUI(frame: CGRect, viewModel: AnyObject) -> QUIProtocol
-    // something just like DOM API innerText
-//    var innerText:String { get set }
     
-    func innerText(text: String)
+    func setContainText(text: String)
 }

@@ -1,5 +1,4 @@
-var time = 0,
-    words = [
+var words = [
         'Hello Swift!',
         'Hello World!',
         'Hello IMWeb',
@@ -10,6 +9,6 @@ var time = 0,
 function changeTitle() {
     return {
         prop: 'title',
-        value: words[(++time) % words.length]
+        value: words[Math.random() * words.length | 0]
     };
 }

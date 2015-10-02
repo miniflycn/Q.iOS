@@ -43,6 +43,6 @@ class DirectiveHandleManager {
     // handle property -> text
     func handleText(directive: DirectiveStruct, value: AnyObject) {
         let qui = QUIInstanceManager.get(directive.uiId)
-        qui!.innerText(value as! String)
+        qui!.setContainText(value as! String)
     }
 }
