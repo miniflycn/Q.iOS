@@ -21,9 +21,4 @@ extension UIButton: QUIProtocol {
         ui.backgroundColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("backgroundColor")!.intValue))
         return ui
     }
-    
-    // TODO too ugly to believe
-    func delegateClick(sender: UIControl) {
-        DirectiveManager.delegateClick(sender)
-    }
 }

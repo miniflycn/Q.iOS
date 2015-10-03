@@ -5,8 +5,9 @@
 //  Created by 杨 文坚 on 15/10/2.
 //  Copyright (c) 2015年 miniflycn. All rights reserved.
 //
+import UIKit
 
-class DirectiveHandleManager {
+class DirectiveHandleManager: NSObject {
     // property -> directive
     var directiveStructPool = Dictionary<String, [DirectiveStruct]>()
     

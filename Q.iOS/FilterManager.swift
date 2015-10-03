@@ -16,7 +16,7 @@ class FilterManager {
             switch filter.method {
                 case "append":
                     result = append(result, args: filter.args)
-                    break;
+                    break
                 case "prepend":
                     result = prepend(result, args: filter.args)
                     break

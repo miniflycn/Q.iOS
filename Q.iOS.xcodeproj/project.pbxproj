@@ -24,6 +24,7 @@
 		60C706A91BBD8E5B00B9C5B2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */; };
 		60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */; };
 		60C706AD1BBD967200B9C5B2 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C706AC1BBD967200B9C5B2 /* UILabel.swift */; };
+		60CABC521BC050910072B93E /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CABC511BC050910072B93E /* UIControl.swift */; };
 		60CBE2981BBE309300B5B478 /* DirectiveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CBE2971BBE309300B5B478 /* DirectiveManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		60C706AA1BBD925300B9C5B2 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		60C706AC1BBD967200B9C5B2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		60CABC511BC050910072B93E /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		60CBE2971BBE309300B5B478 /* DirectiveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 			children = (
 				60C706A81BBD8E5B00B9C5B2 /* UIButton.swift */,
 				60C706AC1BBD967200B9C5B2 /* UILabel.swift */,
+				60CABC511BC050910072B93E /* UIControl.swift */,
 			);
 			name = Q.UI;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */,
 				60C706A21BBD6AF600B9C5B2 /* QViewController.swift in Sources */,
 				60C3C11D1BBEBABD009381A1 /* DirectiveHandleManager.swift in Sources */,
+				60CABC521BC050910072B93E /* UIControl.swift in Sources */,
 				60C7067B1BBD698C00B9C5B2 /* AppDelegate.swift in Sources */,
 				603D17701BBE671E00D64898 /* QUIInstanceManager.swift in Sources */,
 				60C3C1B61BBEE933009381A1 /* FilterStruct.swift in Sources */,
