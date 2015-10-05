@@ -75,7 +75,7 @@ class QViewController: UIViewController {
     
     // clear view & reinit
     private func clearView() {
-        self.view.subviews.map (
+        self.view.subviews.forEach(
             { $0.removeFromSuperview() }
         )
         self.ctx = JSContext()

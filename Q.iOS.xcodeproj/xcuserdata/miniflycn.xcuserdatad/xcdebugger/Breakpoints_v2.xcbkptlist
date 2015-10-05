@@ -652,13 +652,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Q.iOS/QViewController.swift"
-            timestampString = "465595443.667084"
+            timestampString = "465748969.813924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
             endingLineNumber = "78"
             landmarkName = "clearView()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Q.iOS/QViewController.swift"
+            timestampString = "465748969.813924"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "clearView()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Q_iOS.QViewController.(clearView in _050F2F997934705578D22B85A6E48D95) (Q_iOS.QViewController)() -&gt; ()"
+                  moduleName = "Q.iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miniflycn/github/Q.iOS/Q.iOS/QViewController.swift"
+                  timestampString = "465748936.822537"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "239">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Q_iOS.QViewController.((clearView in _050F2F997934705578D22B85A6E48D95) (Q_iOS.QViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "Q.iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miniflycn/github/Q.iOS/Q.iOS/QViewController.swift"
+                  timestampString = "465748936.822944"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
