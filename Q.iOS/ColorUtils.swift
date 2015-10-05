@@ -18,4 +18,8 @@ class ColorUtils {
             alpha: CGFloat(1.0)
         )
     }
+    
+    static func UIColorFromRGB(rgbValue: Int32) -> UIColor {
+        return UIColorFromRGB(UInt(rgbValue))
+    }
 }

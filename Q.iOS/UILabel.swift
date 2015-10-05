@@ -14,11 +14,13 @@ extension UILabel: QUIProtocol {
         self.text = str
     }
     
+    func setContainTextColor(color: Int32) {
+        self.textColor = ColorUtils.UIColorFromRGB(color)
+    }
+    
     static func createQUI(frame: CGRect, viewModel: AnyObject) -> QUIProtocol {
         let rectRect:CGRect = CGRectMake(20, CGFloat(viewModel.objectForKey("top")!.intValue), frame.width - 40, 40)
         let ui = UILabel(frame: rectRect)
-        ui.setContainText(viewModel.objectForKey("text") as! String)
-        ui.textColor = ColorUtils.UIColorFromRGB(UInt(viewModel.objectForKey("color")!.intValue))
         return ui
     }
 }

@@ -11,5 +11,9 @@ protocol QUIProtocol {
     // print a component to view
     static func createQUI(frame: CGRect, viewModel: AnyObject) -> QUIProtocol
     
+    // just like set innerText
     func setContainText(text: String)
+    
+    //set font color
+    func setContainTextColor(color: Int32)
 }

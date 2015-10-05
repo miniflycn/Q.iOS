@@ -23,6 +23,8 @@ class QUIInstanceManager {
             // store
             QUIInstanceStore[uuid] = qui
             QUIViewModelStore[uuid] = viewModel
+            // print common style
+            printCommonStyle(qui, viewModel: viewModel)
         }
     }
     
@@ -33,6 +35,29 @@ class QUIInstanceManager {
             let uuid = ui.tag
             detach(uuid)
         }
+    }
+    
+    static private func valueIfExist(viewModel: AnyObject, key: String, after: (AnyObject) -> Void) {
+        let value = viewModel.objectForKey(key)
+        if (value != nil) {
+            after(value!)
+        }
+    }
+    
+    static private func printCommonStyleForUIView(ui: UIView, viewModel: AnyObject) {
+        valueIfExist(viewModel, key: "backgroundColor", after: {
+            ui.backgroundColor = ColorUtils.UIColorFromRGB($0.intValue)
+        })
+    }
+    
+    static func printCommonStyle(qui: QUIProtocol, viewModel: AnyObject) {
+        valueIfExist(viewModel, key: "text", after: {
+            qui.setContainText("\($0)")
+        })
+        valueIfExist(viewModel, key: "color", after: {
+            qui.setContainTextColor($0.intValue)
+        })
+        printCommonStyleForUIView(qui as! UIView, viewModel: viewModel)
     }
     
     static func detach(uuid: Int) {
