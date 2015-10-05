@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		603D17701BBE671E00D64898 /* QUIInstanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D176F1BBE671E00D64898 /* QUIInstanceManager.swift */; };
 		603D17731BBE67AA00D64898 /* QUidUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D17721BBE67AA00D64898 /* QUidUtils.swift */; };
+		60A3B5D41BC2EBED00A40CC8 /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A3B5D31BC2EBED00A40CC8 /* PropertySetter.swift */; settings = {ASSET_TAGS = (); }; };
 		60C3C11B1BBEB503009381A1 /* DirectiveStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C11A1BBEB503009381A1 /* DirectiveStruct.swift */; };
 		60C3C11D1BBEBABD009381A1 /* DirectiveHandleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C11C1BBEBABD009381A1 /* DirectiveHandleManager.swift */; };
 		60C3C1B61BBEE933009381A1 /* FilterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3C1B51BBEE933009381A1 /* FilterStruct.swift */; };
