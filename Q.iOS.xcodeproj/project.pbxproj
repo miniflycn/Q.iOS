@@ -41,6 +41,7 @@
 /* Begin PBXFileReference section */
 		603D176F1BBE671E00D64898 /* QUIInstanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUIInstanceManager.swift; sourceTree = "<group>"; };
 		603D17721BBE67AA00D64898 /* QUidUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUidUtils.swift; sourceTree = "<group>"; };
+		60A3B5D31BC2EBED00A40CC8 /* PropertySetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertySetter.swift; sourceTree = "<group>"; };
 		60C3C11A1BBEB503009381A1 /* DirectiveStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveStruct.swift; sourceTree = "<group>"; };
 		60C3C11C1BBEBABD009381A1 /* DirectiveHandleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveHandleManager.swift; sourceTree = "<group>"; };
 		60C3C1B51BBEE933009381A1 /* FilterStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterStruct.swift; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 				60C3C11C1BBEBABD009381A1 /* DirectiveHandleManager.swift */,
 				60C3C1B51BBEE933009381A1 /* FilterStruct.swift */,
 				60C3C1B71BBEEB96009381A1 /* FilterManager.swift */,
+				60A3B5D31BC2EBED00A40CC8 /* PropertySetter.swift */,
 			);
 			name = Q.core;
 			sourceTree = "<group>";
@@ -288,6 +290,7 @@
 				60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */,
 				60C706A21BBD6AF600B9C5B2 /* QViewController.swift in Sources */,
 				60C3C11D1BBEBABD009381A1 /* DirectiveHandleManager.swift in Sources */,
+				60A3B5D41BC2EBED00A40CC8 /* PropertySetter.swift in Sources */,
 				60CABC521BC050910072B93E /* UIControl.swift in Sources */,
 				60C7067B1BBD698C00B9C5B2 /* AppDelegate.swift in Sources */,
 				603D17701BBE671E00D64898 /* QUIInstanceManager.swift in Sources */,

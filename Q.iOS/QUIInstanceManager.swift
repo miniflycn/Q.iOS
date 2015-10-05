@@ -37,27 +37,18 @@ class QUIInstanceManager {
         }
     }
     
-    static private func valueIfExist(viewModel: AnyObject, key: String, after: (AnyObject) -> Void) {
+    static private func valueIfExist(viewModel: AnyObject, key: String, has: (AnyObject) -> Void) {
         let value = viewModel.objectForKey(key)
         if (value != nil) {
-            after(value!)
+            has(value!)
         }
     }
     
-    static private func printCommonStyleForUIView(ui: UIView, viewModel: AnyObject) {
-        valueIfExist(viewModel, key: "backgroundColor", after: {
-            ui.backgroundColor = ColorUtils.UIColorFromRGB($0.intValue)
-        })
-    }
-    
     static func printCommonStyle(qui: QUIProtocol, viewModel: AnyObject) {
-        valueIfExist(viewModel, key: "text", after: {
-            qui.setContainText("\($0)")
-        })
-        valueIfExist(viewModel, key: "color", after: {
-            qui.setContainTextColor($0.intValue)
-        })
-        printCommonStyleForUIView(qui as! UIView, viewModel: viewModel)
+        let propertySetter = PropertySetter(qui: qui)
+        valueIfExist(viewModel, key: "text", has: propertySetter.text())
+        valueIfExist(viewModel, key: "color", has: propertySetter.color())
+        valueIfExist(viewModel, key: "backgroundColor", has: propertySetter.backgroundColor())
     }
     
     static func detach(uuid: Int) {
