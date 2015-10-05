@@ -44,7 +44,7 @@ class DirectiveHandleManager: NSObject {
                 self.handleText(directive, value: newVal!)
                 break
             default:
-                print("Couldn't handle \(directive.name)")
+                print("Couldn't handle \(directive.name)", terminator: "")
         }
     }
     

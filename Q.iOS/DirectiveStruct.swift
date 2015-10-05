@@ -31,7 +31,7 @@ struct DirectiveStruct {
         self.arg = arg
         self.filters = []
         for (var i = 0, count = filters.count; i < count; i++) {
-            var filter: AnyObject = filters[i]
+            let filter: AnyObject = filters[i]
             self.filters.append(
                 FilterStruct(method: filter.objectForKey("method") as! String, args: filter.objectForKey("args") as! [AnyObject])
             )

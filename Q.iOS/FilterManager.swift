@@ -21,7 +21,7 @@ class FilterManager {
                     result = prepend(result, args: filter.args)
                     break
                 default:
-                    println("\(filter.method) is not exists")
+                    print("\(filter.method) is not exists")
             }
         }
         return result

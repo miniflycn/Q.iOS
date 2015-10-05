@@ -35,7 +35,7 @@ class DirectiveManager: DirectiveHandleManager {
                 bindNormal(ui, directive: directive)
                 break
             default:
-                println("No define \(directiveName) direcdtive")
+                print("No define \(directiveName) direcdtive")
         }
     }
     
@@ -45,7 +45,7 @@ class DirectiveManager: DirectiveHandleManager {
             let ui = qui as! UIControl
             ui.addTarget(ui, action: "delegateClick:", forControlEvents: UIControlEvents.TouchUpInside)
         } else {
-            println("\(qui) is not a UIControl instance")
+            print("\(qui) is not a UIControl instance")
         }
     }
     

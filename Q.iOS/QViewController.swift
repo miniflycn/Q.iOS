@@ -20,18 +20,18 @@ class QViewController: UIViewController {
     
     // load file string from path
     private func loadFile(path: String) -> NSString {
-        return NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
+        return try! NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
     }
     
     // load DOM from path
     private func loadDOM(path: String) {
         let data = loadFile(path).dataUsingEncoding(NSUTF8StringEncoding)!
-        dom = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil)
+        dom = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
     }
     
     // load logic script
     private func loadLogic(path: String) {
-        ctx.evaluateScript(loadFile(path) as! String)
+        ctx.evaluateScript(loadFile(path) as String)
     }
     
     // print one component
@@ -89,7 +89,7 @@ class QViewController: UIViewController {
     
     // reload view from event
     func reloadView(sender: UIButton) {
-        println("reload")
+        print("reload")
         reloadView()
     }
     
