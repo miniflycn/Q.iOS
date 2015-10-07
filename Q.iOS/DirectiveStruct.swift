@@ -10,7 +10,7 @@ struct DirectiveStruct {
     // which UI bind
     var uiId: Int
     // directive name
-    var name: String
+    var name: DirectiveType
     // may not have arg
     var arg: String?
     // must have target
@@ -26,10 +26,17 @@ struct DirectiveStruct {
         filters: [AnyObject]
     ) {
         self.uiId = uiId
-        self.name = name
+        self.name = .unknow
         self.target = target
         self.arg = arg
         self.filters = []
+        // init name
+        for i in 0...DirectiveType.list.count {
+            if (DirectiveType.list[i].rawValue == name) {
+                self.name = DirectiveType.list[i]
+                break
+            }
+        }
         for (var i = 0, count = filters.count; i < count; i++) {
             let filter: AnyObject = filters[i]
             self.filters.append(

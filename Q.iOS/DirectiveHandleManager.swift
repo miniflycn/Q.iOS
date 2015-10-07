@@ -40,7 +40,7 @@ class DirectiveHandleManager: NSObject {
         }
         
         switch directive.name {
-            case "text":
+            case .text:
                 self.handleText(directive, value: newVal!)
                 break
             default:

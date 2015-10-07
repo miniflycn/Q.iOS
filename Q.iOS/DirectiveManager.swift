@@ -28,10 +28,10 @@ class DirectiveManager: DirectiveHandleManager {
     private func bindOneDirective(ui: QUIProtocol, directive: DirectiveStruct) {
         let directiveName = directive.name
         switch directiveName {
-            case "on":
+            case .on:
                 bindOn(ui, directive: directive)
                 break
-            case "text":
+            case .text:
                 bindNormal(ui, directive: directive)
                 break
             default:

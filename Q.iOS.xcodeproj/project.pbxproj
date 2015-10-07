@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60055E1F1BC55CCF00E23F8D /* DirectiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60055E1E1BC55CCF00E23F8D /* DirectiveType.swift */; settings = {ASSET_TAGS = (); }; };
 		603D17701BBE671E00D64898 /* QUIInstanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D176F1BBE671E00D64898 /* QUIInstanceManager.swift */; };
 		603D17731BBE67AA00D64898 /* QUidUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D17721BBE67AA00D64898 /* QUidUtils.swift */; };
 		60A3B5D41BC2EBED00A40CC8 /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A3B5D31BC2EBED00A40CC8 /* PropertySetter.swift */; settings = {ASSET_TAGS = (); }; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60055E1E1BC55CCF00E23F8D /* DirectiveType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectiveType.swift; sourceTree = "<group>"; };
 		603D176F1BBE671E00D64898 /* QUIInstanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUIInstanceManager.swift; sourceTree = "<group>"; };
 		603D17721BBE67AA00D64898 /* QUidUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QUidUtils.swift; sourceTree = "<group>"; };
 		60A3B5D31BC2EBED00A40CC8 /* PropertySetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertySetter.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				60C3C1B51BBEE933009381A1 /* FilterStruct.swift */,
 				60C3C1B71BBEEB96009381A1 /* FilterManager.swift */,
 				60A3B5D31BC2EBED00A40CC8 /* PropertySetter.swift */,
+				60055E1E1BC55CCF00E23F8D /* DirectiveType.swift */,
 			);
 			name = Q.core;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				603D17731BBE67AA00D64898 /* QUidUtils.swift in Sources */,
 				60C706A41BBD81D600B9C5B2 /* QUIProtocol.swift in Sources */,
 				60C706AB1BBD925300B9C5B2 /* ColorUtils.swift in Sources */,
+				60055E1F1BC55CCF00E23F8D /* DirectiveType.swift in Sources */,
 				60C706A21BBD6AF600B9C5B2 /* QViewController.swift in Sources */,
 				60C3C11D1BBEBABD009381A1 /* DirectiveHandleManager.swift in Sources */,
 				60A3B5D41BC2EBED00A40CC8 /* PropertySetter.swift in Sources */,
